@@ -3,18 +3,26 @@ import colores.*
 import materiales.*
 import objetos.*
 
-object rosa{
+object rosa {
   method leGusta(algo){
   return algo.peso() >= 2000
   }
 }
-object muñeco {
-  var peso = 1000
 
-  method material() = vidrio 
-  method color() = celeste 
-  method indicarPeso(nuevoPeso){
-      peso = nuevoPeso 
-  } // indica el valor para el atributo
-   // getter 
+object estefania {
+  method leGusta(algo){
+  return algo.color().esFuerte()
+  }
+}
+
+object luisa {
+  method leGusta(algo){
+  return algo.material().esBrillante()
+  }
+}
+
+object juan {
+  method leGusta(algo){
+  return not algo.color().esFuerte() || algo.peso().between(1200, 1800)
+  }
 }
